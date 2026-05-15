@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+; ============================================
+; x-env 右键菜单安装脚本
+; 前提: x-env 已放置到 D:\Path\x-env.exe
+; 使用说明: 双击此文件导入注册表即可
+; ============================================
+
+; --- 目录右键菜单 ---
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\x-env]
+@="x-env"
+"Icon"="D:\\Path\\x-env.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\x-env\command]
+@="\"D:\\Path\\x-env.exe\" --cwd \"%1\""
+
+; --- 目录背景右键菜单 (空白处右键) ---
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\x-env]
+@="x-env"
+"Icon"="D:\\Path\\x-env.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\x-env\command]
+@="\"D:\\Path\\x-env.exe\" --cwd \"%V\""

@@ -1,0 +1,9 @@
+﻿Windows Registry Editor Version 5.00
+
+; ============================================
+; x-env 右键菜单卸载脚本
+; 使用说明: 双击此文件即可卸载
+; ============================================
+
+[-HKEY_CURRENT_USER\Software\Classes\Directory\shell\x-env]
+[-HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\x-env]
