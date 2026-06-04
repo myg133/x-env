@@ -124,7 +124,7 @@ fn parse_config_file(path: &Path) -> Result<ParsedConfig> {
 }
 
 fn find_default_env_file(cwd: &Path) -> Option<PathBuf> {
-    let candidates = [".env", "env", "args"];
+    let candidates = ["args", "env", ".env"];
 
     for name in &candidates {
         let path = cwd.join(name);
